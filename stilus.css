@@ -1,0 +1,48 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 100px 300px 50px;
+    gap: 10px;
+    grid-template-areas: 
+    "h h h"
+    "n m a"
+    "f f f";
+
+}
+header {
+    grid-area: h;
+    background-color: orange;
+}
+
+nav {
+    grid-area: n;
+    background-color: lime;
+}
+
+main {
+    grid-area: m;
+    background-color: coral;
+}
+
+aside {
+    grid-area: a;
+    background-color: blue;
+}
+footer {
+    grid-area: f;
+    background-color: pink;
+}
+
+@media screen and (max-width: 500px){
+    body {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 100px 100px 300px 100px;
+        gap: 10px;
+        grid-template-areas: 
+        "h h"
+        "n n"
+        "m a"
+        "f f"
+    }
+}

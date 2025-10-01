@@ -1,0 +1,57 @@
+body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px 100px 200px 200px 100px;
+    gap: 10px;
+    grid-template-areas:
+    "h h"
+    "n n"
+    "s a"
+    "ar a"
+    "f f";
+
+}
+header {
+    grid-area: h;
+    background-color: orange;
+}
+
+nav {
+    grid-area: n;
+    background-color: lime;
+}
+
+section {
+    grid-area: s;
+    background-color: coral;
+}
+
+article {
+    grid-area: ar;
+    background-color: rgb(90, 63, 53);
+}
+
+aside {
+    grid-area: a;
+    background-color: blue;
+}
+footer {
+    grid-area: f;
+    background-color: pink;
+}
+
+@media screen and (max-width: 500px){
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 100px 200px 200px 100px;
+        gap: 10px;
+        grid-template-areas: 
+        "h"
+        "n"
+        "a"
+        "s"
+        "ar"
+        "f";
+    }
+}
